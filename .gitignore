@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.*
+!.env.example
+.vercel
+.wrangler/
+*.local
+.DS_Store
+
+# Contadores locais do funil (dev)
+.data/

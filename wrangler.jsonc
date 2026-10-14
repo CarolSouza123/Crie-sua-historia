@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "crie-sua-historia",
+  "compatibility_date": "2026-10-13",
+  // nodejs_compat: os handlers usam process.env, Buffer e node:crypto.
+  "compatibility_flags": ["nodejs_compat"],
+  // Cloudflare Pages: a pasta de saida do build (npm run build).
+  "pages_build_output_dir": "./dist"
+  // ---------------------------------------------------------------
+  // KV (funil/pedidos/fotos): o binding TRACK_KV NAO fica aqui de
+  // proposito. Um "kv_namespaces" com id placeholder invalido pode
+  // quebrar a validacao do deploy. O caminho oficial e seguro e
+  // ligar pelo painel: Settings -> Functions -> KV namespace
+  // bindings -> criar o namespace e ligar como TRACK_KV
+  // (Production). Passo a passo completo no README, secao
+  // "Publicacao (Cloudflare Pages)".
+  // ---------------------------------------------------------------
+}
